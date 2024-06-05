@@ -77,10 +77,10 @@ def registration(request):
                                         )
         # Login the user and redirect to list page
         login(request, user)
-        data = {"userName":username, "status": "Authenticated"}
+        data = {"userName": username, "status": "Authenticated"}
         return JsonResponse(data)
     else:
-        data = {"userName":username, "error": "Already Registered"}
+        data = {"userName": username, "error": "Already Registered"}
         return JsonResponse(data)
 
 
@@ -108,7 +108,7 @@ def get_dealerships(request, state="All"):
     else:
         endpoint = "/fetchDealers/"+state
     dealerships = get_request(endpoint)
-    return JsonResponse({"status":200, "dealers": dealerships})
+    return JsonResponse({"status": 200, "dealers": dealerships})
 
 
 # Create a `get_dealer_reviews` view to render the reviews of a dealer
@@ -142,16 +142,16 @@ def get_dealer_details(request, dealer_id):
 
 # Create a `add_review` view to submit a review
 def add_review(request):
-    if (request.user.is_anonymous == False):
+    if (request.user.is_anonymous is False):
         data = json.loads(request.body)
         try:
             response = post_review(data)
-            return JsonResponse({"status": 200})
+            return JsonResponse({"status": response["status"]})
         except Exception:
             return JsonResponse({"status": 401,
                                  "message":"Error in posting review"
                                  })
     else:
-        return JsonResponse({"status":403,
+        return JsonResponse({"status": 403,
                              "message":"Unauthorized"
                              })
