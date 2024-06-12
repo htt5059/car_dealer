@@ -74,11 +74,19 @@ The solution will consists of multiple technologies:
 ![Dealership Website UML](./img/dealership-architecture.png)
 
 ## Showcase
+### Deployed landing page
 ![Deployed landing page](./img/deployed_landingpage.png)
-![Deployed logged in page](./img/deployed_loggedinpage.png)
+### Deployed logged in page
+![Deployed logged in page](./img/deployed_loggedin.png)
+### Get dealers as anonymous user
 ![Get dealers as anonymous user](./img/get_dealers.png)
+### Get dealers as authorized user
 ![Get dealers as authorized user](./img/get_dealers_loggedin.png)
-![Dealer by state](./img/dealersbystate)
+### Dealers by state 
+![Dealers by state](./img/dealersbystate.png)
+### Deployed dealer detail page 
 ![Deployed dealer detail page](./img/deployed_dealer_detail.png)
+### Dealership review submission
 ![Dealership review submission](./img/dealership_review_submission.png)
+### Added review 
 ![Added review](./img/added_review.png)
